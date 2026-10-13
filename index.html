@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <main class="calculator">
+
+    <header class="calculator-header">
+      <h1>Calculator</h1>
+      <button type="button" id="history-btn" class="history-btn">
+        History
+      </button>
+    </header>
+
+    <!-- History Panel -->
+    <section id="history-panel" class="history-panel" hidden>
+      <div class="history-header">
+        <h2>Calculation History</h2>
+        <button type="button" id="clear-history" class="clear-history">
+          Clear
+        </button>
+      </div>
+
+      <ul id="history-list"></ul>
+
+      <p id="empty-history">No calculations yet.</p>
+    </section>
+
+    <!-- Display -->
+    <div class="display">
+      <div id="previous"></div>
+      <input type="text" id="display" aria-label="Calculator display" readonly>
+    </div>
+
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+      <button class="utility" data-action="clear">AC</button>
+      <button class="utility" data-action="delete">DEL</button>
+      <button class="operator" data-action="percent">%</button>
+      <button class="operator" data-operator="/">÷</button>
+
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <button class="operator" data-operator="*">×</button>
+
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <button class="operator" data-operator="-">−</button>
+
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <button class="operator" data-operator="+">+</button>
+
+      <button data-action="sign">+/−</button>
+      <button data-number="0">0</button>
+      <button data-action="decimal">.</button>
+      <button class="equals" data-action="equals">=</button>
+    </div>
+
+    <p class="hint">Simple calculations, made easy.</p>
+
+  </main>
+
+</body>
+
+</html>
